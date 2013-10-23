@@ -1,0 +1,503 @@
+/*
+	FUCK YA GIT!
+*/
+
+/* ==========================================================================
+   Base
+   ========================================================================== */
+html{-webkit-font-smoothing: antialiased;}
+body {background:#fff url(/wp-content/themes/marcsquire/assets/img/furley_bg.png);}
+
+a{color:#50554e;}
+a:hover{color:#A1A1A1;}
+
+::-webkit-scrollbar {
+  -webkit-appearance: none;
+  background: #b59c5c;
+  width: 6px;
+}
+::-webkit-scrollbar-thumb {
+  border-radius: 0px;
+  background-color: rgba(85, 88, 81, 1);
+  -webkit-box-shadow: 0 0 1px rgba(255, 255, 255, 0.5);
+}
+
+#wpstats{display:none !important;}
+
+h1{font-weight:300; font-size:45px;}
+
+
+/* =============================================================================
+   Header
+   ========================================================================== */
+.navbar .brand {padding:0 20px;}
+.navbar .brand span#site_title{display:none;}
+#banner { }
+
+
+div.second ul{position:relative; display:block; float:left;}
+div.second ul li{float:left; padding:20px 12px;}
+div.second ul li a{font-weight:bold; color:#50554e;}
+div.second ul li a:hover{color:#A1A1A1; background:transparent; text-shadow: none;}
+div.second ul li.active a{color:#A1A1A1; background:transparent; text-shadow: none;}
+
+.container.inside-header{padding-top:20px;}
+img#homepage_logo{margin:0 0 0 -5px;}
+
+a.logo_container {float: none;}
+img#homepage_logo{float:none;}
+div.second {float:none; width:100%; margin-top:10px;}
+.jumbotron{text-align:left;}
+
+
+/* Fixed Topbar Navigation */
+body.top-navbar { padding-top: 0px; }
+body.admin-bar .navbar-fixed-top { top: 28px; }
+
+
+
+
+/* Jumbotrons
+-------------------------------------------------- */
+
+/* Base class
+------------------------- */
+.jumbotron {
+  position: relative;
+  padding: 40px 0;
+  color: #fff;
+  text-align: center;
+  text-shadow: 0 1px 3px rgba(0,0,0,.4), 0 0 30px rgba(0,0,0,.075);
+  background:url(/wp-content/themes/marcsquire/assets/img/key_west.jpg) no-repeat top center;
+}
+.jumbotron h1 {
+  font-size: 80px;
+  font-weight: bold;
+  letter-spacing: -1px;
+  line-height: 1;
+}
+.jumbotron p {
+  font-size: 24px;
+  font-weight: 300;
+  line-height: 30px;
+  margin-bottom: 30px;
+}
+
+/* Link styles (used on .masthead-links as well) */
+.jumbotron a {
+  color: #fff;
+  color: rgba(255,255,255,.5);
+  -webkit-transition: all .2s ease-in-out;
+     -moz-transition: all .2s ease-in-out;
+          transition: all .2s ease-in-out;
+}
+.jumbotron a:hover {
+  color: #fff;
+  text-shadow: 0 0 10px rgba(255,255,255,.25);
+}
+
+/* Download button */
+@-webkit-keyframes downloadButton {
+  from { box-shadow: inset 0 1px 0 rgba(255,255,255,.1), 0 1px 5px rgba(0,0,0,.25), 0 2px 10px rgba(0,68,204,.5); }
+  50% {  box-shadow: inset 0 1px 0 rgba(255,255,255,.1), 0 1px 5px rgba(0,0,0,.25), 0 2px 25px rgba(0,68,204,.9); }
+  to {   box-shadow: inset 0 1px 0 rgba(255,255,255,.1), 0 1px 5px rgba(0,0,0,.25), 0 2px 10px rgba(0,68,204,.5); }
+}
+@-moz-keyframes downloadButton {
+  from { box-shadow: inset 0 1px 0 rgba(255,255,255,.1), 0 1px 5px rgba(0,0,0,.25), 0 2px 10px rgba(0,68,204,.5); }
+  50% {  box-shadow: inset 0 1px 0 rgba(255,255,255,.1), 0 1px 5px rgba(0,0,0,.25), 0 2px 25px rgba(0,68,204,.9); }
+  to {   box-shadow: inset 0 1px 0 rgba(255,255,255,.1), 0 1px 5px rgba(0,0,0,.25), 0 2px 10px rgba(0,68,204,.5); }
+}
+@-o-keyframes downloadButton {
+  from { box-shadow: inset 0 1px 0 rgba(255,255,255,.1), 0 1px 5px rgba(0,0,0,.25), 0 2px 10px rgba(0,68,204,.5); }
+  50% {  box-shadow: inset 0 1px 0 rgba(255,255,255,.1), 0 1px 5px rgba(0,0,0,.25), 0 2px 25px rgba(0,68,204,.9); }
+  to {   box-shadow: inset 0 1px 0 rgba(255,255,255,.1), 0 1px 5px rgba(0,0,0,.25), 0 2px 10px rgba(0,68,204,.5); }
+}
+@keyframes downloadButton {
+  from { box-shadow: inset 0 1px 0 rgba(255,255,255,.1), 0 1px 5px rgba(0,0,0,.25), 0 2px 10px rgba(0,68,204,.5); }
+  50% {  box-shadow: inset 0 1px 0 rgba(255,255,255,.1), 0 1px 5px rgba(0,0,0,.25), 0 2px 25px rgba(0,68,204,.9); }
+  to {   box-shadow: inset 0 1px 0 rgba(255,255,255,.1), 0 1px 5px rgba(0,0,0,.25), 0 2px 10px rgba(0,68,204,.5); }
+}
+.masthead .btn {
+  padding: 14px 24px;
+  font-size: 24px;
+  font-weight: 200;
+  color: #fff; /* redeclare to override the `.jumbotron a` */
+  border: 0;
+  -webkit-border-radius: 6px;
+     -moz-border-radius: 6px;
+          border-radius: 6px;
+  -webkit-box-shadow: inset 0 1px 0 rgba(255,255,255,.1), 0 1px 5px rgba(0,0,0,.25), 0 2px 10px rgba(0,68,204,.01);
+     -moz-box-shadow: inset 0 1px 0 rgba(255,255,255,.1), 0 1px 5px rgba(0,0,0,.25), 0 2px 10px rgba(0,68,204,.01);
+          box-shadow: inset 0 1px 0 rgba(255,255,255,.1), 0 1px 5px rgba(0,0,0,.25), 0 2px 10px rgba(0,68,204,.01);
+  -webkit-animation-name: downloadButton;
+     -moz-animation-name: downloadButton;
+  -webkit-animation-duration: 1.5s;
+     -moz-animation-duration: 1.5s;
+  -webkit-animation-iteration-count: infinite;
+     -moz-animation-iteration-count: infinite;
+  -webkit-transition: none;
+     -moz-transition: none;
+          transition: none;
+
+}
+.masthead .btn:active {
+  -webkit-box-shadow: inset 0 2px 4px rgba(0,0,0,.1), 0 1px 0 rgba(255,255,255,.1);
+     -moz-box-shadow: inset 0 2px 4px rgba(0,0,0,.1), 0 1px 0 rgba(255,255,255,.1);
+          box-shadow: inset 0 2px 4px rgba(0,0,0,.1), 0 1px 0 rgba(255,255,255,.1);
+}
+
+
+/* Pattern overlay
+------------------------- */
+.jumbotron .container {
+  position: relative;
+  z-index: 2;
+}
+.jumbotron:after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+ 
+  opacity: .4;
+}
+
+/* Masthead (docs home)
+------------------------- */
+.masthead {
+  padding: 20px 0 80px;
+  margin-bottom: 0;
+  color: #fff;
+  margin-top:0px;
+}
+
+
+
+.masthead h1 {
+  font-size: 40px;
+  line-height: 1;
+  letter-spacing: -2px;
+  font-family:helvetica, arial, sans-serif;
+}
+
+.masthead h1#homepage_jobtitle{text-align:left; clear:both; padding-top:40px;}
+
+.masthead p {
+  font-size: 40px;
+  font-weight: 200;
+  line-height: 1.25;
+}
+.masthead p#homepage_blurb{text-align:left; font-size:20px;padding:20px 0;}
+
+/* Textual links in masthead */
+.masthead-links {
+  margin: 0;
+  list-style: none;
+}
+.masthead-links li {
+  display: inline;
+  padding: 0 10px;
+  color: rgba(255,255,255,.25);
+}
+
+
+
+/* ==========================================================================
+   Fonts
+   ========================================================================== */
+
+@font-face {
+    font-family: 'blanch_caps_inlineregular';
+    src: url('/wp-content/themes/marcsquire/assets/css/fonts/blanch_caps_inline-webfont.eot');
+    src: url('/wp-content/themes/marcsquire/assets/css/fonts/blanch_caps_inline-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/wp-content/themes/marcsquire/assets/css/fonts/blanch_caps_inline-webfont.woff') format('woff'),
+         url('/wp-content/themes/marcsquire/assets/css/fonts/blanch_caps_inline-webfont.ttf') format('truetype'),
+         url('/wp-content/themes/marcsquire/assets/css/fonts/blanch_caps_inline-webfont.svg#blanch_caps_inlineregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'blanch_caps_lightregular';
+    src: url('/wp-content/themes/marcsquire/assets/css/fonts/blanch_caps_light-webfont.eot');
+    src: url('/wp-content/themes/marcsquire/assets/css/fonts/blanch_caps_light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/wp-content/themes/marcsquire/assets/css/fonts/blanch_caps_light-webfont.woff') format('woff'),
+         url('/wp-content/themes/marcsquire/assets/css/fonts/blanch_caps_light-webfont.ttf') format('truetype'),
+         url('/wp-content/themes/marcsquire/assets/css/fonts/blanch_caps_light-webfont.svg#blanch_caps_lightregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'blanch_capsregular';
+    src: url('/wp-content/themes/marcsquire/assets/css/fonts/blanch_caps-webfont.eot');
+    src: url('/wp-content/themes/marcsquire/assets/css/fonts/blanch_caps-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/wp-content/themes/marcsquire/assets/css/fonts/blanch_caps-webfont.woff') format('woff'),
+         url('/wp-content/themes/marcsquire/assets/css/fonts/blanch_caps-webfont.ttf') format('truetype'),
+         url('/wp-content/themes/marcsquire/assets/css/fonts/blanch_caps-webfont.svg#blanch_capsregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'blanch_condensed_inlineRg';
+    src: url('/wp-content/themes/marcsquire/assets/css/fonts/blanch_condensed_inline-webfont.eot');
+    src: url('/wp-content/themes/marcsquire/assets/css/fonts/blanch_condensed_inline-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/wp-content/themes/marcsquire/assets/css/fonts/blanch_condensed_inline-webfont.woff') format('woff'),
+         url('/wp-content/themes/marcsquire/assets/css/fonts/blanch_condensed_inline-webfont.ttf') format('truetype'),
+         url('/wp-content/themes/marcsquire/assets/css/fonts/blanch_condensed_inline-webfont.svg#blanch_condensed_inlineRg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'blanch_condensed_lightregular';
+    src: url('/wp-content/themes/marcsquire/assets/css/fonts/blanch_condensed_light-webfont.eot');
+    src: url('/wp-content/themes/marcsquire/assets/css/fonts/blanch_condensed_light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/wp-content/themes/marcsquire/assets/css/fonts/blanch_condensed_light-webfont.woff') format('woff'),
+         url('/wp-content/themes/marcsquire/assets/css/fonts/blanch_condensed_light-webfont.ttf') format('truetype'),
+         url('/wp-content/themes/marcsquire/assets/css/fonts/blanch_condensed_light-webfont.svg#blanch_condensed_lightregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'blanch_condensedregular';
+    src: url('/wp-content/themes/marcsquire/assets/css/fonts/blanch_condensed-webfont.eot');
+    src: url('/wp-content/themes/marcsquire/assets/css/fonts/blanch_condensed-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/wp-content/themes/marcsquire/assets/css/fonts/blanch_condensed-webfont.woff') format('woff'),
+         url('/wp-content/themes/marcsquire/assets/css/fonts/blanch_condensed-webfont.ttf') format('truetype'),
+         url('/wp-content/themes/marcsquire/assets/css/fonts/blanch_condensed-webfont.svg#blanch_condensedregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+/* ==========================================================================
+   Content
+   ========================================================================== */
+
+#content { }
+#content.homepage{padding:40px 0 100px;}
+
+#map img{max-width:none; width:225px; height:225px;}
+#map p.map_caption{width:200px; font-size:11px;line-height:14px;}
+#map p.location_name{width:200px; margin:5px 0 0;}
+/* ==========================================================================
+   Web Projects
+   ========================================================================== */
+#web_projects .row-fluid{padding:30px 0; border-bottom:1px solid #aaa; margin:0px auto;}
+#web_projects .row-fluid img{border:3px solid #333;}
+#web_projects .row-fluid a:hover{text-decoration:none;}
+#web_projects .row-fluid p{font-size:18px; line-height:23px;}
+#web_projects .row-fluid a h2{line-height:35px; }
+
+
+
+ul#web_portfolio{padding:0px; margin:0px; list-style: none;clear:both;}
+ul#web_portfolio li{border-bottom:1px solid #AAA;padding: 10px 10px 30px; margin:0 0 20px;}
+ul#web_portfolio li a{text-decoration:none;}
+ul#web_portfolio li a h2{line-height:35px; color:#50554E;}
+ul#web_portfolio li a:hover h2{color:#A1A1A1;}
+ul#web_portfolio li p{font-size:18px; line-height:23px;}
+ul#web_portfolio li img{float:left; margin-right:30px;width:800px; border:3px solid #333;}
+
+/* ==========================================================================
+   Video Projects
+   ========================================================================== */
+.vimeo{width:800px; height:450px;}
+
+
+/* ==========================================================================
+   Photography
+   ========================================================================== */
+#photo-portfolio img {
+	display: block;
+	margin: 0px auto;
+	padding-bottom:10px;
+}
+
+.getty-badge a img{padding:20px !important; background:black;}
+
+/* ==========================================================================
+   Primary Content
+   ========================================================================== */
+
+#main { }
+
+
+
+/* ==========================================================================
+   Sidebar
+   ========================================================================== */
+
+#sidebar { }
+
+
+
+/* ==========================================================================
+   Posts
+   ========================================================================== */
+
+.hentry header { }
+.hentry time { }
+.hentry p.byline { }
+.hentry .entry-content { }
+.hentry footer { }
+
+
+
+/* ==========================================================================
+   Footer
+   ========================================================================== */
+
+#content-info {width:100%; background:url(/wp-content/themes/marcsquire/assets/img/bg_footer.png); color:#919191; padding:30px 0;}
+#content-info .row-fluid{padding:20px 0;}
+#content-info p{padding:20px;}
+ul#menu-social-nav{list-style: none; clear:both;}
+ul#menu-social-nav li{text-indent:-9999px; float:left;width:90px; height:90px;}
+ul#menu-social-nav li a{display:block; height:90px;}
+
+ul#menu-social-nav li.menu-facebook{background:url(/wp-content/themes/marcsquire/assets/img/sprite_facebook.png) top center no-repeat;margin-right:10px;}
+ul#menu-social-nav li.menu-twitter{background:url(/wp-content/themes/marcsquire/assets/img/sprite_twitter.png) top center no-repeat;margin-right:10px;}
+ul#menu-social-nav li.menu-linkedin{background:url(/wp-content/themes/marcsquire/assets/img/sprite_linkedin.png) top center no-repeat;margin-right:10px;}
+ul#menu-social-nav li.menu-gplus{background:url(/wp-content/themes/marcsquire/assets/img/sprite_gplus.png) top center no-repeat;margin-right:10px;}
+ul#menu-social-nav li.menu-instagram{background:url(/wp-content/themes/marcsquire/assets/img/sprite_instagram.png) 0px -2px no-repeat;}
+
+ul#menu-social-nav li.menu-facebook:hover{background:url(/wp-content/themes/marcsquire/assets/img/sprite_facebook.png) 0px -90px no-repeat}
+ul#menu-social-nav li.menu-twitter:hover{background:url(/wp-content/themes/marcsquire/assets/img/sprite_twitter.png) 0px -90px no-repeat;}
+ul#menu-social-nav li.menu-linkedin:hover{background:url(/wp-content/themes/marcsquire/assets/img/sprite_linkedin.png) 0px -91px no-repeat}
+ul#menu-social-nav li.menu-gplus:hover{background:url(/wp-content/themes/marcsquire/assets/img/sprite_gplus.png) 0px -92px no-repeat;}
+ul#menu-social-nav li.menu-instagram:hover{background:url(/wp-content/themes/marcsquire/assets/img/sprite_instagram.png) 0px -93px no-repeat;}
+
+#twitter-widget-0{width:100% !important;}
+/* ==========================================================================
+   WordPress Generated Classes
+   See: http://codex.wordpress.org/CSS#WordPress_Generated_Classes
+   ========================================================================== */
+
+.aligncenter { display: block; margin: 0 auto; }
+.alignleft { float: left; }
+.alignright { float: right; }
+figure.alignnone { margin-left: 0; margin-right: 0; }
+
+
+/* ==========================================================================
+   Hide/Show for Photography Portfolio Loading
+   ========================================================================== */
+.photo_portfolio_container{display:none;}
+
+/* ==========================================================================
+   Media Queries
+   ========================================================================== */
+@media (max-width: 1200px){
+	div.second{margin-top:5px;}
+
+}
+
+@media (min-width: 768px) and (max-width: 980px) {
+  /* Widen masthead and social buttons to fill body padding */
+  .jumbotron {
+    margin-top: -20px; /* Offset bottom margin on .navbar */
+  }
+  .vimeo{width:600px; height:337px;}
+  
+
+}
+
+@media (max-width: 979px) {
+  /* Fix top padding when using the responsive grid with the fixed topbar */
+  body.top-navbar {
+    padding-top: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .jumbotron {
+    padding: 40px 20px;
+    margin-top:   -20px; /* Offset bottom margin on .navbar */
+  }
+  .vimeo{width:600px; height:337px;}
+}
+
+@media (max-width: 767px){
+  body {
+	padding-right: 0px;
+	padding-left: 00px;
+  }
+  .navbar-fixed-top, .navbar-fixed-bottom {
+	margin-right: 0px;
+	margin-left: 0px;
+  }
+  .row, .thumbnails {
+	padding: 0 20px;
+  }
+  .row-fluid {
+	width: 94%;
+	padding: 0 3%;
+  }
+  .vimeo{width:500px; height:281px; padding:10px;}
+}
+
+@media (max-width: 480px) {
+  /* Remove padding above jumbotron */
+  body {
+    padding-top: 0;
+  }
+
+  .masthead h1#homepage_jobtitle{text-align:left; clear:both; padding-top:0px; font-size:40px;}
+  .vimeo{width:300px; height:169px; padding:5px;}
+  #content.homepage{padding:0px 10px 75px;}
+  
+  /* Change up some type stuff */
+  h2 small {
+    display: block;
+  }
+
+  /* Downsize the jumbotrons */
+  .jumbotron h1 {
+    font-size: 60px;
+  }
+  .jumbotron p,
+  .jumbotron .btn {
+    font-size: 20px;
+  }
+  .jumbotron .btn {
+    display: block;
+    margin: 0 auto;
+  }
+  .getty-badge a img{width:200px !important;}
+	
+}
+
+@media (min-width: 370px) and (max-width: 480px){
+	  #content.homepage{padding:0px 10px 75px;}
+	  .page-header{margin:20px 15px 30px}
+	  .getty-badge a img{padding:20px !important; background:black; max-width:300px;}
+	  #photo-portfolio img {
+		padding-bottom:5px;
+	  }
+	.fb_iframe_widget iframe{width:280px !important;}
+}
